@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        Created: April 3, 2025
+        Updated: April 4, 2025
+        Description: Landing page for Innovative Handling Solutions (IHS), a ground handling company at MSP Airport
+        Features: Responsive design, modern navigation, interactive aircraft visualization, and professional styling
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Handling Solutions | MSP Airport</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="interactive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <header>
+            <div class="logo-container">
+                <h2 class="company-logo">IHS</h2>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-item active">Home</a></li>
+                    <li><a href="#" class="nav-item">Services</a></li>
+                    <li><a href="#" class="nav-item">Careers</a></li>
+                    <li><a href="#" class="nav-item">Contact</a></li>
+                    <li><a href="#" class="nav-item">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <div class="intro-content">
+                <h1 class="main-heading">Ground Handling Excellence at MSP Airport</h1>
+                <p class="intro-text">Innovative Handling Solutions delivers exceptional ground handling services at Minneapolis-Saint Paul International Airport. From deicing to ramp operations, we keep Terminal 2 running smoothly through Minnesota's toughest conditions.</p>
+            </div>
+        </section>
+        <!-- Aircraft Centerpiece Section -->
+        <section class="aircraft-centerpiece">
+            <div class="plane-image-container">
+                <div class="image-wrapper">
+                    <div class="plane-interactive">
+                        <img src="top-down.png" alt="Airbus A320 Top-Down View" class="plane-image">
+                        <svg class="hover-overlay" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+                            <!-- Nose area -->
+                            <path id="nose-area" d="M450,50 L550,50 L550,150 L450,150 Z" fill="transparent" />
+                            <!-- Wings area -->
+                            <path id="wings-area" d="M200,300 L800,300 L800,500 L200,500 Z" fill="transparent" />
+                            <!-- Fuselage area -->
+                            <path id="fuselage-area" d="M450,200 L550,200 L550,600 L450,600 Z" fill="transparent" />
+                            <!-- Tail area -->
+                            <path id="tail-area" d="M450,700 L550,700 L550,850 L450,850 Z" fill="transparent" />
+                        </svg>
+                        
+                        <!-- Hover labels -->
+                        <div class="hover-label" id="nose-label">
+                            <div class="label-content">
+                                <h3>Deicing Done Right</h3>
+                                <p>Winter-ready solutions for safe MSP departures.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="hover-label" id="wings-label">
+                            <div class="label-content">
+                                <h3>Wings Ready for Winter</h3>
+                                <p>Eco-friendly deicing for 50+ planes daily.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="hover-label" id="fuselage-label">
+                            <div class="label-content">
+                                <h3>Spotless Inside and Out</h3>
+                                <p>We clean cabins for every passenger.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="hover-label" id="tail-label">
+                            <div class="label-content">
+                                <h3>Ramp Ready in Record Time</h3>
+                                <p>Baggage, towing, and loading—precision for every flight.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="interactive-instruction">
+                <p><i class="fas fa-hand-pointer"></i> Hover over the aircraft to explore our services</p>
+            </div>
+        </section>
+        
+        <!-- Key Stats Section -->
+        <section class="stats-section">
+            <h2 class="section-title">IHS by the Numbers</h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-description">Daily Aircraft Deiced</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-description">Daily Departures Supported</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-description">Bags Handled Daily</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2018</div>
+                    <div class="stat-description">Year Founded at MSP</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2 class="section-title">Ready to Partner with IHS?</h2>
+            <div class="cta-buttons">
+                <a href="#" class="cta-button">Explore Our Services</a>
+                <a href="#" class="cta-button">Join Our Team</a>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Innovative Handling Solutions</h3>
+                    <p>Terminal 2, Minneapolis-Saint Paul International Airport</p>
+                    <p>Minneapolis, MN 55450</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact</h3>
+                    <p><i class="fas fa-phone"></i> (612) 555-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@ihs-msp.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Connect</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Innovative Handling Solutions. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // JavaScript for hover and mobile tap events
+        document.addEventListener('DOMContentLoaded', function() {
+            // All interactive areas
+            const areas = [
+                'nose-area', 'wings-area', 'fuselage-area', 'engines-area', 'tail-area'
+            ];
+            
+            // Function to handle tap events on mobile
+            function handleTap(areaId) {
+                // Get corresponding label
+                const labelId = areaId.replace('area', 'label');
+                const label = document.getElementById(labelId);
+                
+                // Toggle label visibility
+                if (window.getComputedStyle(label).opacity === '1') {
+                    label.style.opacity = '0';
+                } else {
+                    // Hide all labels first
+                    areas.forEach(area => {
+                        const lbl = document.getElementById(area.replace('area', 'label'));
+                        lbl.style.opacity = '0';
+                    });
+                    
+                    // Show the tapped label
+                    label.style.opacity = '1';
+                }
+            }
+            
+            // Add tap event listeners to all areas
+            areas.forEach(areaId => {
+                const area = document.getElementById(areaId);
+                if (area) {
+                    // For mobile
+                    area.addEventListener('click', function(e) {
+                        // Prevent default behavior to avoid issues on mobile
+                        e.preventDefault();
+                        handleTap(areaId);
+                    });
+                    
+                    // For desktop - add explicit mouse events to improve hover state
+                    area.addEventListener('mouseenter', function() {
+                        const labelId = areaId.replace('area', 'label');
+                        const label = document.getElementById(labelId);
+                        label.style.opacity = '1';
+                    });
+                    
+                    area.addEventListener('mouseleave', function() {
+                        const labelId = areaId.replace('area', 'label');
+                        const label = document.getElementById(labelId);
+                        // Only hide if no other interactions are active
+                        setTimeout(() => {
+                            label.style.opacity = '0';
+                        }, 100);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

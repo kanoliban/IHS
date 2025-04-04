@@ -1,0 +1,172 @@
+/* 
+   Created: April 3, 2025
+   Updated: April 4, 2025 (00:11:02)
+   Description: Interactive styles for Airbus A320 image hover effects
+   Features: Hover areas and labels for interactive airplane diagram
+   Changes: Positioned all labels adjacent to their respective aircraft parts, fixed wings label positioning to prevent overlap
+*/
+
+/* Google Fonts - Special Elite is a stencil-like font */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/* Interactive plane container */
+.plane-interactive {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* SVG Overlay for hover areas */
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.hover-overlay path {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Highlight effect for hovered areas */
+.hover-overlay path {
+    transition: all 0.3s ease;
+    stroke: transparent;
+    stroke-width: 2px;
+}
+
+.hover-overlay path:hover {
+    fill: rgba(0, 48, 135, 0.15); /* Blue tint - using IHS brand color */
+    stroke: rgba(0, 48, 135, 0.6); /* Border around the hovered area */
+}
+
+/* Label styling with improved visibility and positioning */
+.hover-label {
+    position: absolute;
+    opacity: 0;
+    z-index: 30;
+    pointer-events: none;
+    font-family: 'Special Elite', monospace;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    transform: translateY(10px) scale(0.95); /* Start slightly offset for animation */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.label-content {
+    background-color: rgba(255, 255, 255, 0.95); /* Increased opacity for better readability */
+    padding: 15px;
+    border: 2px solid #000; /* Thicker border */
+    max-width: 250px;
+    position: relative;
+}
+
+.label-content h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    color: #000;
+}
+
+.label-content p {
+    font-size: 16px;
+    margin: 0;
+    color: #000;
+}
+
+/* Add a small badge/indicator to show where the user is hovering */
+.hover-overlay path::after {
+    content: '';
+    display: none;
+}
+
+/* Animate labels when they appear */
+#wings-area:hover ~ #wings-label,
+#fuselage-area:hover ~ #fuselage-label,
+#tail-area:hover ~ #tail-label {
+    transform: translateY(0) scale(1);
+}
+
+/* Positioning for each label */
+
+/* Nose label - positioned immediately adjacent to the nose hover box */
+#nose-label {
+    top: 8%;
+    left: 58%;
+    transform: translateY(10px) scale(0.95);
+}
+
+#nose-area:hover ~ #nose-label {
+    transform: translateY(0) scale(1);
+}
+
+/* Wings label - repositioned to prevent overlap */
+#wings-label {
+    top: 35%;
+    left: 15%;
+}
+
+/* Fuselage label - positioned immediately adjacent to the fuselage hover box */
+#fuselage-label {
+    top: 40%;
+    left: 58%;
+}
+
+
+
+/* Tail label - positioned immediately adjacent to the tail hover box */
+#tail-label {
+    bottom: 18%;
+    left: 58%;
+}
+
+/* Show label when corresponding area is hovered */
+#nose-area:hover ~ #nose-label,
+#wings-area:hover ~ #wings-label,
+#fuselage-area:hover ~ #fuselage-label,
+#engines-area:hover ~ #engines-label,
+#tail-area:hover ~ #tail-label {
+    opacity: 1;
+}
+
+/* Mobile touch support */
+@media (hover: none) {
+    .hover-overlay path {
+        cursor: default;
+    }
+    
+    /* Handle touch interactions with JavaScript */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .label-content {
+        padding: 10px;
+        max-width: 200px;
+    }
+    
+    .label-content h3 {
+        font-size: 20px;
+    }
+    
+    .label-content p {
+        font-size: 14px;
+    }
+    
+    /* Adjust positions for mobile */
+    #nose-label, #wings-label, #fuselage-label {
+        left: 0;
+    }
+    
+    #engines-label, #tail-label {
+        left: 50%;
+    }
+    
+    /* Shorter connector lines on mobile */
+    .connector-line {
+        width: 60px !important;
+    }
+}
